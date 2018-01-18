@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="App5.App5" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="23" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-feature android:name="android.hardware.location.gps" />
+  <uses-feature android:name="android.hardware.location.network" />
+  <application android:name="md593b8d625023f6802361dd1b8a6546be5.MainApplication" android:allowBackup="true" android:label="App5.App5" android:debuggable="true">
+    <activity android:label="App5" android:name="md593b8d625023f6802361dd1b8a6546be5.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="App5.App5.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.App5.App5" />
+      </intent-filter>
+    </receiver>
+    <meta-data android:name="android.support.VERSION" android:value="25.4.0" />
+  </application>
+</manifest>
